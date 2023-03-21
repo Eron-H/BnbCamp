@@ -12,7 +12,7 @@ contract StakingRewards {
     IERC20 public rewardsToken;
     IERC20 public stakingToken;
     address public owner;
-    uint256 public periodFinish = 2679305149;
+    uint256 public periodFinish;
     uint256 public time = block.timestamp;
     uint256 public rewardRate = 2;
 
@@ -26,9 +26,10 @@ contract StakingRewards {
     uint256 private _totalSupply;
     mapping(address => uint256) private _balances;
 
-    constructor(address _rewardsToken, address _stakingToken) {
+    constructor(address _rewardsToken, address _stakingToken,uint _periodFinish) {
         rewardsToken = IERC20(_rewardsToken);
         stakingToken = IERC20(_stakingToken);
+        periodFinish = _periodFinish;
         owner = msg.sender;
     }
 
@@ -55,7 +56,7 @@ contract StakingRewards {
     }
 
     function lastTimeRewardApplicable() public view returns (uint256) {
-        return block.timestamp;
+        return block.timestamp < periodFinish ? block.timestamp : periodFinish;
     }
 
     function rewardPerToken() public view returns (uint256) {
