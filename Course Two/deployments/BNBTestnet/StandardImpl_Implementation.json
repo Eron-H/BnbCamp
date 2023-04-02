@@ -1,0 +1,134 @@
+{
+  "address": "0xFa40899AB1658D5EfA7305e69aD9c4e9B544d6c1",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_initValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "initialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_newValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "setValue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "value",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x0615b78f00154af332cf526feb4b0fd5e97cc24a97b8a2e46ad9a3c57e6fcd54",
+  "receipt": {
+    "to": null,
+    "from": "0x309974831e2142c668884a34567C63D460b92491",
+    "contractAddress": "0xFa40899AB1658D5EfA7305e69aD9c4e9B544d6c1",
+    "transactionIndex": 6,
+    "gasUsed": "146083",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x1aff4c168ace7f0b0b326e1f44c7db5acee723606b3f1e20e03fd15936e8b96f",
+    "transactionHash": "0x0615b78f00154af332cf526feb4b0fd5e97cc24a97b8a2e46ad9a3c57e6fcd54",
+    "logs": [],
+    "blockNumber": 28580164,
+    "cumulativeGasUsed": "1694641",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "2bd5a4d0c73339dce06822a8ebb9861e",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_initValue\",\"type\":\"uint256\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_newValue\",\"type\":\"uint256\"}],\"name\":\"setValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"value\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/StandardImpl.sol\":\"StandardImpl\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/StandardImpl.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\n\\r\\npragma solidity ^0.8.10;\\r\\n\\r\\ncontract StandardImpl {\\r\\n    uint256 public constant VERSION = 1;\\r\\n    // uint256 public constant VERSION = 2;\\r\\n\\r\\n    bool public initialized;\\r\\n\\r\\n    uint256 public value;\\r\\n\\r\\n    modifier initializer() {\\r\\n        require(!initialized, \\\"Only initialize once\\\");\\r\\n        _;\\r\\n        initialized = true;\\r\\n    }\\r\\n\\r\\n    function initialize(uint256 _initValue) public initializer {\\r\\n        value = _initValue;\\r\\n    }\\r\\n\\r\\n    function setValue(uint256 _newValue) public {\\r\\n        value = _newValue + 10;\\r\\n    }\\r\\n}\\r\\n\",\"keccak256\":\"0xd5deb2d29f3f16353a5370a9e45fa72d52664df51158a98bbc598547b48b0632\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101ae806100206000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063158ef93e1461005c5780633fa4f2451461007e5780635524107714610095578063fe4b84df146100aa578063ffa1ad74146100bd575b600080fd5b6000546100699060ff1681565b60405190151581526020015b60405180910390f35b61008760015481565b604051908152602001610075565b6100a86100a3366004610138565b6100c5565b005b6100a86100b8366004610138565b6100d6565b610087600181565b6100d081600a610151565b60015550565b60005460ff16156101245760405162461bcd60e51b81526020600482015260146024820152734f6e6c7920696e697469616c697a65206f6e636560601b604482015260640160405180910390fd5b60019081556000805460ff19169091179055565b60006020828403121561014a57600080fd5b5035919050565b8082018082111561017257634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220c2bc428796df8160d3c800600dd7c5b79bc6a428a3f6658a91171f8cd028ae2464736f6c63430008130033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c8063158ef93e1461005c5780633fa4f2451461007e5780635524107714610095578063fe4b84df146100aa578063ffa1ad74146100bd575b600080fd5b6000546100699060ff1681565b60405190151581526020015b60405180910390f35b61008760015481565b604051908152602001610075565b6100a86100a3366004610138565b6100c5565b005b6100a86100b8366004610138565b6100d6565b610087600181565b6100d081600a610151565b60015550565b60005460ff16156101245760405162461bcd60e51b81526020600482015260146024820152734f6e6c7920696e697469616c697a65206f6e636560601b604482015260640160405180910390fd5b60019081556000805460ff19169091179055565b60006020828403121561014a57600080fd5b5035919050565b8082018082111561017257634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220c2bc428796df8160d3c800600dd7c5b79bc6a428a3f6658a91171f8cd028ae2464736f6c63430008130033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 1236,
+        "contract": "contracts/StandardImpl.sol:StandardImpl",
+        "label": "initialized",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 1238,
+        "contract": "contracts/StandardImpl.sol:StandardImpl",
+        "label": "value",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

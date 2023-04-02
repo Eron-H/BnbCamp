@@ -1,0 +1,6 @@
+{
+	"BNBTestnet": {
+		"ProxyAdmin": "0x42138FD97f79940b4740Fe9bc0546af64232c54e",
+		"MyContract": "0x24c38b234e49C56Da9F32036dd55dB1A05cF130f"
+	}
+}
